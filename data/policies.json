@@ -1,0 +1,39 @@
+
+[
+  {
+    "title": "Deposit Policy",
+    "content": "A $25 non-refundable deposit is required for all bookings to secure your appointment. This deposit goes towards the total cost of your service. No deposit means your slot is not secured."
+  },
+  {
+    "title": "Punctuality",
+    "content": "Please arrive on time. Being more than 7 minutes late will result in a $10 fee. If you are 12 or more minutes late, your appointment will be automatically cancelled, and the deposit will not be refunded."
+  },
+  {
+    "title": "Cancellations & Rescheduling",
+    "content": "A minimum of 24 hours notice is required to reschedule or cancel your appointment. Each booking includes one free reschedule if notice is given within the required timeframe."
+  },
+  {
+    "title": "No-Shows & Late Cancellations",
+    "content": "No-shows or cancellations within 24 hours of the appointment will forfeit their deposit. A new deposit of 50% of the service price will be required to rebook."
+  },
+  {
+    "title": "Fill Eligibility",
+    "content": "To qualify for a fill, you must have at least 40% of your lashes remaining for a 2-week fill, and at least 30% for a 3-week fill. Anything less will be considered a new set."
+  },
+  {
+    "title": "Health & Preparation",
+    "content": "Please arrive with clean lashes and no eye makeup, or a $5 cleaning fee will be applied. Avoid caffeine before your appointment. Remove contact lenses. If you are sick, please reschedule."
+  },
+  {
+    "title": "Payments",
+    "content": "Deposits are accepted via Zelle or Cash App. The remaining balance must be paid in cash at the time of your appointment."
+  },
+  {
+    "title": "Guests & Parking",
+    "content": "Please do not bring any guests without prior confirmation. Parking details will be provided with your appointment confirmation."
+  },
+  {
+    "title": "Foreign Fills",
+    "content": "We do not accept foreign fills from other artists unless pre-approved. A removal and a new set will be required."
+  }
+]

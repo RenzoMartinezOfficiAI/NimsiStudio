@@ -1,0 +1,33 @@
+
+[
+  {
+    "category": "New Sets",
+    "items": [
+      { "name": "Classic", "price": 85 },
+      { "name": "Wet", "price": 95 },
+      { "name": "Hybrid", "price": 100, "popular": true },
+      { "name": "Volume", "price": 120 },
+      { "name": "Mega", "price": 135 }
+    ]
+  },
+  {
+    "category": "2-Week Fills",
+    "items": [
+      { "name": "Classic", "price": 65 },
+      { "name": "Wet", "price": 75 },
+      { "name": "Hybrid", "price": 80 },
+      { "name": "Volume", "price": 90 },
+      { "name": "Mega", "price": 100 }
+    ]
+  },
+  {
+    "category": "3-Week Fills",
+    "items": [
+      { "name": "Classic", "price": 80 },
+      { "name": "Wet", "price": 90 },
+      { "name": "Hybrid", "price": 95 },
+      { "name": "Volume", "price": 105 },
+      { "name": "Mega", "price": 115 }
+    ]
+  }
+]
