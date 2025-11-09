@@ -7,7 +7,7 @@ const StarRating: React.FC<{ rating: number }> = ({ rating }) => {
     return (
         <div className="flex text-yellow-400">
             {[...Array(5)].map((_, i) => (
-                <svg key={i} className={`w-5 h-5 ${i < rating ? 'fill-current' : 'text-gray-300 dark:text-gold-dark'}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg key={i} className={`w-5 h-5 ${i < rating ? 'fill-current' : 'text-gray-300'}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
             ))}
         </div>
     );
@@ -40,17 +40,17 @@ const Reviews: React.FC = () => {
     const averageRating = reviews.length > 0 ? (reviews.reduce((acc, r) => acc + r.rating, 0) / reviews.length).toFixed(1) : '0';
 
     return (
-        <section id="reviews" className="py-24 bg-white dark:bg-transparent">
+        <section id="reviews" className="py-24 bg-white dark:bg-ink">
             <div ref={ref} className={`container mx-auto px-6 transition-all duration-1000 ${animationClasses}`}>
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-playfair font-bold text-ink dark:text-gold-light">What Our Clients Say</h2>
+                    <h2 className="text-4xl md:text-5xl font-playfair font-bold text-ink dark:text-white">What Our Clients Say</h2>
                     <div className="mt-4 flex justify-center items-center gap-2 h-6">
                         {loading ? (
                              <p className="text-slate dark:text-gray-300 font-semibold">Loading reviews...</p>
                         ) : (
                             <>
                                 <StarRating rating={Math.round(parseFloat(averageRating))} />
-                                <p className="text-slate dark:text-gold font-semibold">{averageRating} average rating from {reviews.length} reviews.</p>
+                                <p className="text-slate dark:text-gray-300 font-semibold">{averageRating} average rating from {reviews.length} reviews.</p>
                             </>
                         )}
                     </div>
@@ -61,11 +61,11 @@ const Reviews: React.FC = () => {
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {reviews.map((review, index) => (
-                            <div key={index} className="bg-gray-50 dark:bg-ink-light p-8 rounded-lg shadow-sm">
+                            <div key={index} className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-sm">
                                 <div className="flex items-center mb-4">
                                     <img src={review.avatar} alt={review.name} className="w-12 h-12 rounded-full mr-4 object-cover" />
                                     <div>
-                                        <h4 className="font-poppins font-semibold text-ink dark:text-gold-light">{review.name}</h4>
+                                        <h4 className="font-poppins font-semibold text-ink dark:text-white">{review.name}</h4>
                                         <StarRating rating={review.rating} />
                                     </div>
                                 </div>
@@ -76,10 +76,10 @@ const Reviews: React.FC = () => {
                 )}
                 
                 <div className="mt-16 text-center flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href={TYPEFORM_URL} target="_blank" rel="noopener noreferrer" className="bg-pink-blush text-ink font-poppins font-semibold py-3 px-8 rounded-lg hover:bg-pink-hover transition-all duration-300 transform hover:scale-105 dark:bg-gold dark:text-ink dark:hover:bg-gold-light">
+                    <a href={TYPEFORM_URL} target="_blank" rel="noopener noreferrer" className="bg-pink-blush text-ink font-poppins font-semibold py-3 px-8 rounded-lg hover:bg-pink-hover transition-all duration-300 transform hover:scale-105">
                         Leave a Review
                     </a>
-                    <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="border-2 border-pink-blush text-ink dark:text-gold font-poppins font-semibold py-3 px-8 rounded-lg hover:bg-pink-blush hover:text-ink transition-colors duration-300 dark:border-gold dark:hover:bg-gold dark:hover:text-ink">
+                    <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="border-2 border-pink-blush text-ink dark:text-white font-poppins font-semibold py-3 px-8 rounded-lg hover:bg-pink-blush hover:text-ink transition-colors duration-300">
                         DM on Instagram
                     </a>
                 </div>
