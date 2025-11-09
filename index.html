@@ -42,7 +42,15 @@
                             blush: '#F7CDE1',
                             hover: '#E9AFC8',
                         },
-                        ink: '#111827',
+                        gold: {
+                            DEFAULT: '#C9B068',
+                            light: '#F0E0A8',
+                            dark: '#A88B44',
+                        },
+                        ink: {
+                          DEFAULT: '#111827',
+                          light: '#1F2937',
+                        },
                         slate: '#6B7280',
                         success: '#16A34A',
                         warning: '#F59E0B',
@@ -122,8 +130,19 @@
   }
 }
 </script>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  .dark body {
+    background-image: url('https://images.unsplash.com/photo-1536022803585-794e43962b98?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+</style>
 </head>
-<body class="bg-white dark:bg-ink font-inter text-slate dark:text-gray-300">
+<body class="bg-white dark:bg-transparent font-inter text-slate dark:text-gray-300">
     <div id="root"></div>
 </body>
 </html>

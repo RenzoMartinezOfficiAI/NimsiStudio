@@ -11,7 +11,6 @@ import Gallery from './components/Gallery';
 import Reviews from './components/Reviews';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import AIFeatures from './components/AIFeatures';
 
 const App: React.FC = () => {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
@@ -40,7 +39,6 @@ const App: React.FC = () => {
                 <Policies />
                 <Checklist />
                 <Aftercare />
-                <AIFeatures />
                 <Gallery />
                 <Reviews />
                 <Contact />

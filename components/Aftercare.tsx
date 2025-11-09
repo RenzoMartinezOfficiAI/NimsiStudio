@@ -25,10 +25,10 @@ const Aftercare: React.FC = () => {
     }, []);
 
     return (
-        <section id="tips" className="py-24 bg-gray-50 dark:bg-gray-900">
+        <section id="tips" className="py-24 bg-gray-50 dark:bg-ink-light/90 dark:backdrop-blur-sm">
             <div ref={ref} className={`container mx-auto px-6 transition-all duration-1000 ${animationClasses}`}>
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-playfair font-bold text-ink dark:text-white">Tips & Aftercare</h2>
+                    <h2 className="text-4xl md:text-5xl font-playfair font-bold text-ink dark:text-gold-light">Tips & Aftercare</h2>
                     <p className="mt-4 text-lg text-slate max-w-2xl mx-auto">Keep your lashes looking flawless for longer.</p>
                 </div>
                 {loading ? (
@@ -36,12 +36,12 @@ const Aftercare: React.FC = () => {
                 ) : (
                     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {tips.map((tipCategory, index) => (
-                            <div key={index} className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
-                                <h3 className="font-poppins text-xl font-bold text-ink dark:text-white mb-4">{tipCategory.title}</h3>
+                            <div key={index} className="bg-white dark:bg-ink p-8 rounded-lg shadow-md">
+                                <h3 className="font-poppins text-xl font-bold text-ink dark:text-gold mb-4">{tipCategory.title}</h3>
                                 <ul className="space-y-3">
                                     {tipCategory.items.map((item, itemIndex) => (
                                          <li key={itemIndex} className="flex items-start">
-                                            <span className="text-pink-blush mr-3 mt-1">&#10003;</span>
+                                            <span className="text-pink-blush dark:text-gold mr-3 mt-1">&#10003;</span>
                                             <span className="text-slate dark:text-gray-300">{item}</span>
                                         </li>
                                     ))}
