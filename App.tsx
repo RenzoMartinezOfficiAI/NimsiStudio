@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -11,17 +10,15 @@ import Gallery from './components/Gallery';
 import Reviews from './components/Reviews';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import FlowingBackground from './components/FlowingBackground';
 
 const App: React.FC = () => {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
     const BOOKING_URL = process.env.BOOKING_PROVIDER_URL || 'https://app.acuityscheduling.com/schedule/b1c76505';
 
     useEffect(() => {
-        if (theme === 'dark') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
+        document.documentElement.classList.toggle('dark', theme === 'dark');
+        document.body.classList.toggle('bg-ink', theme === 'dark');
         localStorage.setItem('theme', theme);
     }, [theme]);
 
@@ -30,24 +27,27 @@ const App: React.FC = () => {
     };
 
     return (
-        <div className="relative overflow-x-hidden">
-            <Header onThemeSwitch={handleThemeSwitch} currentTheme={theme} />
-            <main>
-                <Hero />
-                <About />
-                <Services />
-                <Policies />
-                <Checklist />
-                <Aftercare />
-                <Gallery />
-                <Reviews />
-                <Contact />
-            </main>
-            <Footer />
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="fixed bottom-5 right-5 z-50 bg-pink-blush text-ink font-poppins font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-pink-hover transition-transform duration-200 hover:scale-105">
-                Book Now
-            </a>
-        </div>
+        <>
+            <FlowingBackground theme={theme} />
+            <div className="relative overflow-x-hidden">
+                <Header onThemeSwitch={handleThemeSwitch} currentTheme={theme} />
+                <main>
+                    <Hero />
+                    <About />
+                    <Services />
+                    <Policies />
+                    <Checklist />
+                    <Aftercare />
+                    <Gallery />
+                    <Reviews />
+                    <Contact />
+                </main>
+                <Footer />
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="fixed bottom-5 right-5 z-50 bg-pink-blush text-ink font-poppins font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-pink-hover transition-transform duration-200 hover:scale-105">
+                    Book Now
+                </a>
+            </div>
+        </>
     );
 };
 
