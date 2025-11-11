@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { Tip } from '../types';
@@ -25,24 +24,24 @@ const Aftercare: React.FC = () => {
     }, []);
 
     return (
-        <section id="tips" className="py-24 bg-gray-50 dark:bg-gray-900">
+        <section id="tips" className="py-24 bg-gray-50 dark:bg-brand-black">
             <div ref={ref} className={`container mx-auto px-6 transition-all duration-1000 ${animationClasses}`}>
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-playfair font-bold text-ink dark:text-white">Tips & Aftercare</h2>
-                    <p className="mt-4 text-lg text-slate max-w-2xl mx-auto">Keep your lashes looking flawless for longer.</p>
+                    <h2 className="text-4xl md:text-5xl font-playfair font-bold text-ink dark:text-gold">Tips & Aftercare</h2>
+                    <p className="mt-4 text-lg text-slate max-w-2xl mx-auto dark:text-text-light">Keep your lashes looking flawless for longer.</p>
                 </div>
                 {loading ? (
-                    <div className="text-center text-slate dark:text-gray-400">Loading tips...</div>
+                    <div className="text-center text-slate dark:text-text-medium">Loading tips...</div>
                 ) : (
                     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {tips.map((tipCategory, index) => (
-                            <div key={index} className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
-                                <h3 className="font-poppins text-xl font-bold text-ink dark:text-white mb-4">{tipCategory.title}</h3>
+                            <div key={index} className="bg-white dark:bg-surface-black p-8 rounded-lg shadow-md">
+                                <h3 className="font-poppins text-xl font-bold text-ink dark:text-gold mb-4">{tipCategory.title}</h3>
                                 <ul className="space-y-3">
                                     {tipCategory.items.map((item, itemIndex) => (
                                          <li key={itemIndex} className="flex items-start">
-                                            <span className="text-pink-blush mr-3 mt-1">&#10003;</span>
-                                            <span className="text-slate dark:text-gray-300">{item}</span>
+                                            <span className="text-pink-blush dark:text-gold mr-3 mt-1">&#10003;</span>
+                                            <span className="text-slate dark:text-text-light">{item}</span>
                                         </li>
                                     ))}
                                 </ul>

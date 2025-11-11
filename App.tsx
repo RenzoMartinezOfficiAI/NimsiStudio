@@ -17,8 +17,12 @@ const App: React.FC = () => {
     const BOOKING_URL = process.env.BOOKING_PROVIDER_URL || 'https://app.acuityscheduling.com/schedule/b1c76505';
 
     useEffect(() => {
-        document.documentElement.classList.toggle('dark', theme === 'dark');
-        document.body.classList.toggle('bg-ink', theme === 'dark');
+        const isDark = theme === 'dark';
+        document.documentElement.classList.toggle('dark', isDark);
+        document.body.classList.toggle('dark-mode-bg', isDark);
+        if (!isDark) {
+            document.body.classList.remove('dark-mode-bg');
+        }
         localStorage.setItem('theme', theme);
     }, [theme]);
 
