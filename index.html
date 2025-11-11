@@ -41,13 +41,13 @@
                             blush: '#F7CDE1',
                             hover: '#E9AFC8',
                         },
-                        // New Elegant Dark Theme
-                        'brand-black': '#121212',
-                        'surface-black': '#1E1E1E',
-                        'gold': '#D4AF37',
-                        'gold-hover': '#EACD6F',
-                        'text-light': '#E0E0E0',
-                        'text-medium': '#A0A0A0',
+                        // New Dark Mage Theme
+                        'mage-black': '#1A1A1A',
+                        'mage-surface': '#333130',
+                        'mage-gold': '#D2B48C',
+                        'mage-gold-hover': '#E0C4A4',
+                        'mage-text-light': '#EAE2D9',
+                        'mage-text-medium': '#A89F96',
                         // Base
                         ink: '#171717',
                         slate: '#6B7280',
@@ -133,12 +133,21 @@
   html {
     scroll-behavior: smooth;
   }
+  .light-mode-bg {
+    background-image: url('https://i.postimg.cc/3NmVkrMx/white-flow.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
   .dark-mode-bg {
-    background-color: #121212;
+    background-image: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('https://i.postimg.cc/5277NQHf/black-flow.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
   }
 </style>
 </head>
-<body class="font-inter text-slate dark:text-text-medium">
+<body class="font-inter text-slate dark:text-mage-text-medium">
     <div id="root"></div>
 </body>
 </html>

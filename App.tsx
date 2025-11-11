@@ -10,7 +10,7 @@ import Gallery from './components/Gallery';
 import Reviews from './components/Reviews';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import FlowingBackground from './components/FlowingBackground';
+import Incentive from './components/Incentive';
 
 const App: React.FC = () => {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
@@ -20,9 +20,7 @@ const App: React.FC = () => {
         const isDark = theme === 'dark';
         document.documentElement.classList.toggle('dark', isDark);
         document.body.classList.toggle('dark-mode-bg', isDark);
-        if (!isDark) {
-            document.body.classList.remove('dark-mode-bg');
-        }
+        document.body.classList.toggle('light-mode-bg', !isDark);
         localStorage.setItem('theme', theme);
     }, [theme]);
 
@@ -32,17 +30,17 @@ const App: React.FC = () => {
 
     return (
         <>
-            <FlowingBackground theme={theme} />
             <div className="relative overflow-x-hidden">
                 <Header onThemeSwitch={handleThemeSwitch} currentTheme={theme} />
                 <main>
                     <Hero />
                     <About />
                     <Services />
+                    <Gallery />
                     <Policies />
                     <Checklist />
                     <Aftercare />
-                    <Gallery />
+                    <Incentive />
                     <Reviews />
                     <Contact />
                 </main>

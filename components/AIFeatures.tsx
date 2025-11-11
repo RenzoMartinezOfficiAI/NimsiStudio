@@ -101,22 +101,22 @@ const AIFeatures: React.FC = () => {
     const TabButton: React.FC<{tab: AITab, label: string}> = ({ tab, label }) => (
         <button
             onClick={() => setActiveTab(tab)}
-            className={`px-4 py-2 text-sm font-semibold rounded-md transition-colors ${activeTab === tab ? 'bg-pink-blush text-ink' : 'text-slate hover:bg-gray-100 dark:text-text-light dark:hover:bg-surface-black'}`}
+            className={`px-4 py-2 text-sm font-semibold rounded-md transition-colors ${activeTab === tab ? 'bg-pink-blush text-ink' : 'text-slate hover:bg-gray-100 dark:text-mage-text-light dark:hover:bg-mage-surface'}`}
         >
             {label}
         </button>
     );
 
     return (
-        <section id="ai-tools" className="py-24 bg-white dark:bg-surface-black">
+        <section id="ai-tools" className="py-24 bg-white dark:bg-mage-surface">
             <div ref={ref} className={`container mx-auto px-6 transition-all duration-1000 ${animationClasses}`}>
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-playfair font-bold text-ink dark:text-gold">AI Studio Tools</h2>
-                    <p className="mt-4 text-lg text-slate max-w-2xl mx-auto dark:text-text-light">Experiment with cutting-edge AI, powered by Google Gemini.</p>
+                    <h2 className="text-4xl md:text-5xl font-playfair font-bold text-ink dark:text-mage-gold">AI Studio Tools</h2>
+                    <p className="mt-4 text-lg text-slate max-w-2xl mx-auto dark:text-mage-text-light">Experiment with cutting-edge AI, powered by Google Gemini.</p>
                 </div>
 
-                <div className="max-w-4xl mx-auto bg-gray-50 dark:bg-brand-black rounded-lg shadow-lg p-4 sm:p-8">
-                    <div className="flex justify-center space-x-2 sm:space-x-4 mb-8 border-b border-gray-200 dark:border-surface-black pb-4">
+                <div className="max-w-4xl mx-auto bg-gray-50 dark:bg-mage-black rounded-lg shadow-lg p-4 sm:p-8">
+                    <div className="flex justify-center space-x-2 sm:space-x-4 mb-8 border-b border-gray-200 dark:border-mage-surface pb-4">
                         <TabButton tab="edit" label="Image Editor" />
                         <TabButton tab="generate" label="Image Generator" />
                         <TabButton tab="think" label="Thinking Mode" />
@@ -128,13 +128,13 @@ const AIFeatures: React.FC = () => {
                     <div className={activeTab === 'edit' ? 'block' : 'hidden'}>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div>
-                                <label htmlFor="file-upload" className="block text-sm font-medium text-ink dark:text-text-light mb-2">Upload Image</label>
+                                <label htmlFor="file-upload" className="block text-sm font-medium text-ink dark:text-mage-text-light mb-2">Upload Image</label>
                                 <input id="file-upload" type="file" accept="image/*" onChange={handleFileChange} className="block w-full text-sm text-slate file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-pink-blush/20 file:text-pink-hover hover:file:bg-pink-blush/30"/>
                                 {imagePreview && <img src={imagePreview} alt="Preview" className="mt-4 rounded-lg shadow-md max-h-64 w-auto mx-auto"/>}
                             </div>
                             <div>
-                                <label htmlFor="edit-prompt" className="block text-sm font-medium text-ink dark:text-text-light mb-2">Edit Prompt</label>
-                                <textarea id="edit-prompt" value={editPrompt} onChange={(e) => setEditPrompt(e.target.value)} placeholder="e.g., Add a retro filter" rows={3} className="w-full p-2 border border-gray-300 rounded-md dark:bg-surface-black dark:border-gray-600 focus:ring-gold focus:border-gold"></textarea>
+                                <label htmlFor="edit-prompt" className="block text-sm font-medium text-ink dark:text-mage-text-light mb-2">Edit Prompt</label>
+                                <textarea id="edit-prompt" value={editPrompt} onChange={(e) => setEditPrompt(e.target.value)} placeholder="e.g., Add a retro filter" rows={3} className="w-full p-2 border border-gray-300 rounded-md dark:bg-mage-surface dark:border-mage-surface focus:ring-mage-gold focus:border-mage-gold"></textarea>
                                 <button onClick={handleEditSubmit} disabled={isEditing} className="mt-4 w-full bg-pink-blush text-ink font-semibold py-2 px-4 rounded-lg hover:bg-pink-hover disabled:bg-gray-300 disabled:cursor-not-allowed">
                                     {isEditing ? 'Editing...' : 'Apply Edit'}
                                 </button>
@@ -142,7 +142,7 @@ const AIFeatures: React.FC = () => {
                         </div>
                         {editedImage && (
                              <div className="mt-8 text-center">
-                                <h3 className="text-xl font-poppins font-semibold mb-4 text-ink dark:text-gold">Edited Result</h3>
+                                <h3 className="text-xl font-poppins font-semibold mb-4 text-ink dark:text-mage-gold">Edited Result</h3>
                                 <img src={editedImage} alt="Edited result" className="rounded-lg shadow-md max-h-96 w-auto mx-auto"/>
                             </div>
                         )}
@@ -151,15 +151,15 @@ const AIFeatures: React.FC = () => {
                     {/* Image Generator */}
                      <div className={activeTab === 'generate' ? 'block' : 'hidden'}>
                         <div>
-                            <label htmlFor="gen-prompt" className="block text-sm font-medium text-ink dark:text-text-light mb-2">Generation Prompt</label>
-                            <textarea id="gen-prompt" value={genPrompt} onChange={(e) => setGenPrompt(e.target.value)} placeholder="e.g., An elegant, minimalist logo for a lash studio" rows={3} className="w-full p-2 border border-gray-300 rounded-md dark:bg-surface-black dark:border-gray-600 focus:ring-gold focus:border-gold"></textarea>
+                            <label htmlFor="gen-prompt" className="block text-sm font-medium text-ink dark:text-mage-text-light mb-2">Generation Prompt</label>
+                            <textarea id="gen-prompt" value={genPrompt} onChange={(e) => setGenPrompt(e.target.value)} placeholder="e.g., An elegant, minimalist logo for a lash studio" rows={3} className="w-full p-2 border border-gray-300 rounded-md dark:bg-mage-surface dark:border-mage-surface focus:ring-mage-gold focus:border-mage-gold"></textarea>
                             <button onClick={handleGenerateSubmit} disabled={isGenerating} className="mt-4 w-full bg-pink-blush text-ink font-semibold py-2 px-4 rounded-lg hover:bg-pink-hover disabled:bg-gray-300 disabled:cursor-not-allowed">
                                 {isGenerating ? 'Generating...' : 'Generate Image'}
                             </button>
                         </div>
                         {generatedImage && (
                              <div className="mt-8 text-center">
-                                <h3 className="text-xl font-poppins font-semibold mb-4 text-ink dark:text-gold">Generated Image</h3>
+                                <h3 className="text-xl font-poppins font-semibold mb-4 text-ink dark:text-mage-gold">Generated Image</h3>
                                 <img src={generatedImage} alt="Generated result" className="rounded-lg shadow-md max-h-96 w-auto mx-auto"/>
                             </div>
                         )}
@@ -168,16 +168,16 @@ const AIFeatures: React.FC = () => {
                     {/* Thinking Mode */}
                      <div className={activeTab === 'think' ? 'block' : 'hidden'}>
                         <div>
-                            <label htmlFor="complex-prompt" className="block text-sm font-medium text-ink dark:text-text-light mb-2">Your Complex Query</label>
-                            <textarea id="complex-prompt" value={complexPrompt} onChange={(e) => setComplexPrompt(e.target.value)} placeholder="Ask a complex question that requires deep reasoning..." rows={5} className="w-full p-2 border border-gray-300 rounded-md dark:bg-surface-black dark:border-gray-600 focus:ring-gold focus:border-gold"></textarea>
+                            <label htmlFor="complex-prompt" className="block text-sm font-medium text-ink dark:text-mage-text-light mb-2">Your Complex Query</label>
+                            <textarea id="complex-prompt" value={complexPrompt} onChange={(e) => setComplexPrompt(e.target.value)} placeholder="Ask a complex question that requires deep reasoning..." rows={5} className="w-full p-2 border border-gray-300 rounded-md dark:bg-mage-surface dark:border-mage-surface focus:ring-mage-gold focus:border-mage-gold"></textarea>
                             <button onClick={handleThinkSubmit} disabled={isThinking} className="mt-4 w-full bg-pink-blush text-ink font-semibold py-2 px-4 rounded-lg hover:bg-pink-hover disabled:bg-gray-300 disabled:cursor-not-allowed">
                                 {isThinking ? 'Thinking...' : 'Submit Query'}
                             </button>
                         </div>
                         {complexResponse && (
                              <div className="mt-8">
-                                <h3 className="text-xl font-poppins font-semibold mb-4 text-ink dark:text-gold">Gemini's Response</h3>
-                                <div className="prose dark:prose-invert max-w-none p-4 bg-white dark:bg-surface-black rounded-md whitespace-pre-wrap">{complexResponse}</div>
+                                <h3 className="text-xl font-poppins font-semibold mb-4 text-ink dark:text-mage-gold">Gemini's Response</h3>
+                                <div className="prose dark:prose-invert max-w-none p-4 bg-white dark:bg-mage-surface rounded-md whitespace-pre-wrap">{complexResponse}</div>
                             </div>
                         )}
                     </div>
