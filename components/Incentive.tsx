@@ -6,9 +6,9 @@ const Incentive: React.FC = () => {
     const INSTAGRAM_URL = process.env.INSTAGRAM_DM_URL || 'https://www.instagram.com/lashesbynimsi';
 
     return (
-        <section id="incentive" className="py-24 bg-white dark:bg-mage-surface">
+        <section id="incentive" className="py-24 bg-white dark:bg-gray-900">
             <div ref={ref} className={`container mx-auto px-6 transition-all duration-1000 ${animationClasses}`}>
-                <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 bg-gray-50 dark:bg-mage-black p-8 md:p-12 rounded-lg shadow-lg text-center md:text-left">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 bg-gray-50 dark:bg-ink p-8 md:p-12 rounded-lg shadow-lg text-center md:text-left">
                     <div className="md:w-1/3 max-w-xs">
                         <img 
                             src="https://i.postimg.cc/J0jXvvXb/image0.png" 
@@ -17,15 +17,15 @@ const Incentive: React.FC = () => {
                         />
                     </div>
                     <div className="md:w-2/3">
-                        <h3 className="text-3xl lg:text-4xl font-playfair font-bold text-ink dark:text-mage-gold">Share the Love!</h3>
-                        <p className="mt-4 text-lg text-slate dark:text-mage-text-light leading-relaxed">
-                            Receive <strong className="text-pink-blush dark:text-mage-gold-hover">$5 off your next service</strong> anytime you tag me in a selfie or leave a review.
+                        <h3 className="text-3xl lg:text-4xl font-playfair font-bold text-ink dark:text-white">Share the Love!</h3>
+                        <p className="mt-4 text-lg text-slate dark:text-slate-200 leading-relaxed">
+                            Receive <strong className="text-ink dark:text-white">$5 off your next service</strong> anytime you tag me in a selfie or leave a review.
                         </p>
                         <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
-                             <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="bg-pink-blush text-ink font-poppins font-semibold py-3 px-6 rounded-lg hover:bg-pink-hover transition-all duration-300 transform hover:scale-105">
+                             <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="bg-ink text-white dark:bg-white dark:text-ink font-poppins font-semibold py-3 px-6 rounded-lg hover:bg-slate-800 dark:hover:bg-gray-200 transition-all duration-300 transform hover:scale-105">
                                 Tag a Selfie
                             </a>
-                             <a href="#reviews" className="border-2 border-pink-blush text-ink dark:text-mage-text-light dark:border-mage-gold dark:hover:bg-mage-gold dark:hover:text-mage-black font-poppins font-semibold py-3 px-6 rounded-lg hover:bg-pink-blush hover:text-ink transition-colors duration-300">
+                             <a href="#reviews" className="border-2 border-ink text-ink dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-ink font-poppins font-semibold py-3 px-6 rounded-lg hover:bg-ink hover:text-white transition-colors duration-300">
                                 Leave a Review
                             </a>
                         </div>

@@ -23,11 +23,11 @@ const Gallery: React.FC = () => {
     const filteredImages = filter === 'All' ? allImages : allImages.filter(img => img.category === filter);
 
     return (
-        <section id="gallery" className="py-24 bg-gray-50 dark:bg-mage-black">
+        <section id="gallery" className="py-24 bg-gray-50 dark:bg-ink">
             <div ref={ref} className={`container mx-auto px-6 transition-all duration-1000 ${animationClasses}`}>
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-playfair font-bold text-ink dark:text-mage-gold">Our Work</h2>
-                    <p className="mt-4 text-lg text-slate max-w-2xl mx-auto dark:text-mage-text-light">A showcase of our custom lash artistry.</p>
+                    <h2 className="text-4xl md:text-5xl font-playfair font-bold text-ink dark:text-white">Our Work</h2>
+                    <p className="mt-4 text-lg text-slate max-w-2xl mx-auto dark:text-slate-200">A showcase of our custom lash artistry.</p>
                 </div>
                 
                 <div className="flex justify-center flex-wrap gap-2 mb-12">
@@ -35,7 +35,7 @@ const Gallery: React.FC = () => {
                         <button 
                             key={cat} 
                             onClick={() => setFilter(cat)}
-                            className={`px-4 py-2 text-sm font-semibold rounded-full transition-colors ${filter === cat ? 'bg-pink-blush text-ink' : 'bg-white dark:bg-mage-surface text-slate dark:text-mage-text-light hover:bg-gray-100 dark:hover:bg-mage-surface/50'}`}
+                            className={`px-4 py-2 text-sm font-semibold rounded-full transition-colors ${filter === cat ? 'bg-ink text-white' : 'bg-white dark:bg-gray-800 text-slate dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
                         >
                             {cat}
                         </button>
@@ -47,12 +47,12 @@ const Gallery: React.FC = () => {
                         <div key={index} className="group relative aspect-[4/5] overflow-hidden rounded-lg shadow-lg">
                             <img src={image.src} alt={`${image.category} lashes`} loading="lazy" className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                             <div className="absolute bottom-4 left-4 bg-white/80 dark:bg-mage-black/80 text-ink dark:text-mage-gold text-sm font-bold px-3 py-1 rounded-full">{image.category}</div>
+                             <div className="absolute bottom-4 left-4 bg-white/80 dark:bg-ink/80 text-ink dark:text-white text-sm font-bold px-3 py-1 rounded-full">{image.category}</div>
                         </div>
                     ))}
                 </div>
                  <div className="text-center mt-12">
-                     <a href="https://www.instagram.com/lashesbynimsi" target="_blank" rel="noopener noreferrer" className="text-pink-blush hover:text-pink-hover dark:text-mage-gold-hover dark:hover:text-mage-gold font-semibold">
+                     <a href="https://www.instagram.com/lashesbynimsi" target="_blank" rel="noopener noreferrer" className="text-ink hover:text-slate-700 dark:text-white dark:hover:text-gray-300 font-semibold">
                          Follow on Instagram for more &rarr;
                      </a>
                  </div>

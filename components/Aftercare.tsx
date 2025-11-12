@@ -24,24 +24,24 @@ const Aftercare: React.FC = () => {
     }, []);
 
     return (
-        <section id="tips" className="py-24 bg-gray-50 dark:bg-mage-black">
+        <section id="tips" className="py-24 bg-gray-50 dark:bg-ink">
             <div ref={ref} className={`container mx-auto px-6 transition-all duration-1000 ${animationClasses}`}>
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-playfair font-bold text-ink dark:text-mage-gold">Tips & Aftercare</h2>
-                    <p className="mt-4 text-lg text-slate max-w-2xl mx-auto dark:text-mage-text-light">Keep your lashes looking flawless for longer.</p>
+                    <h2 className="text-4xl md:text-5xl font-playfair font-bold text-ink dark:text-white">Tips & Aftercare</h2>
+                    <p className="mt-4 text-lg text-slate max-w-2xl mx-auto dark:text-slate-200">Keep your lashes looking flawless for longer.</p>
                 </div>
                 {loading ? (
-                    <div className="text-center text-slate dark:text-mage-text-medium">Loading tips...</div>
+                    <div className="text-center text-slate dark:text-slate-400">Loading tips...</div>
                 ) : (
                     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {tips.map((tipCategory, index) => (
-                            <div key={index} className="bg-white dark:bg-mage-surface p-8 rounded-lg shadow-md">
-                                <h3 className="font-poppins text-xl font-bold text-ink dark:text-mage-gold mb-4">{tipCategory.title}</h3>
+                            <div key={index} className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-md">
+                                <h3 className="font-poppins text-xl font-bold text-ink dark:text-white mb-4">{tipCategory.title}</h3>
                                 <ul className="space-y-3">
                                     {tipCategory.items.map((item, itemIndex) => (
                                          <li key={itemIndex} className="flex items-start">
-                                            <span className="text-pink-blush dark:text-mage-gold mr-3 mt-1">&#10003;</span>
-                                            <span className="text-slate dark:text-mage-text-light">{item}</span>
+                                            <svg className="w-5 h-5 text-ink dark:text-white mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                                            <span className="text-slate dark:text-slate-200">{item}</span>
                                         </li>
                                     ))}
                                 </ul>

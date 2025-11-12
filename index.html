@@ -37,19 +37,7 @@
                     },
                     colors: {
                         white: '#FFFFFF',
-                        pink: {
-                            blush: '#F7CDE1',
-                            hover: '#E9AFC8',
-                        },
-                        // New Dark Mage Theme
-                        'mage-black': '#1A1A1A',
-                        'mage-surface': '#333130',
-                        'mage-gold': '#D2B48C',
-                        'mage-gold-hover': '#E0C4A4',
-                        'mage-text-light': '#EAE2D9',
-                        'mage-text-medium': '#A89F96',
-                        // Base
-                        ink: '#171717',
+                        ink: '#000000',
                         slate: '#6B7280',
                         success: '#16A34A',
                         warning: '#F59E0B',
@@ -134,20 +122,20 @@
     scroll-behavior: smooth;
   }
   .light-mode-bg {
-    background-image: url('https://i.postimg.cc/3NmVkrMx/white-flow.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), url('https://i.postimg.cc/9MtWR3sp/Untitled-design-4.png');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
   }
   .dark-mode-bg {
-    background-image: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('https://i.postimg.cc/5277NQHf/black-flow.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url('https://i.postimg.cc/9MtWR3sp/Untitled-design-4.png');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
   }
 </style>
 </head>
-<body class="font-inter text-slate dark:text-mage-text-medium">
+<body class="font-inter text-slate-700 dark:text-slate-200">
     <div id="root"></div>
 </body>
 </html>

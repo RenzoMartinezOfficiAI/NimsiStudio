@@ -11,6 +11,7 @@ import Reviews from './components/Reviews';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Incentive from './components/Incentive';
+import SectionSeparator from './components/SectionSeparator';
 
 const App: React.FC = () => {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
@@ -35,17 +36,22 @@ const App: React.FC = () => {
                 <main>
                     <Hero />
                     <About />
+                    <SectionSeparator />
                     <Services />
+                    <SectionSeparator />
                     <Gallery />
+                    <SectionSeparator />
                     <Policies />
                     <Checklist />
+                    <SectionSeparator />
                     <Aftercare />
                     <Incentive />
+                    <SectionSeparator />
                     <Reviews />
                     <Contact />
                 </main>
                 <Footer />
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="fixed bottom-5 right-5 z-50 bg-pink-blush text-ink font-poppins font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-pink-hover transition-transform duration-200 hover:scale-105">
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="fixed bottom-5 right-5 z-50 bg-ink text-white dark:bg-white dark:text-ink font-poppins font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-slate-700 dark:hover:bg-gray-200 transition-all duration-200 hover:scale-105">
                     Book Now
                 </a>
             </div>
