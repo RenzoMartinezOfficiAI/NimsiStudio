@@ -2,8 +2,8 @@ import React from 'react';
 
 const Hero: React.FC = () => {
     return (
-        <section id="home" className="relative h-screen flex items-center justify-center text-center">
-            {/* The background is now set on the body element */}
+        <section id="home" className="relative h-screen flex items-center justify-center text-center bg-gray-100 dark:bg-gray-900">
+            {/* This section now has its own background, overriding the body's background image */}
             
             <div className="relative z-10 container mx-auto px-6">
                 <h1 className="mb-6">
@@ -20,16 +20,12 @@ const Hero: React.FC = () => {
                     <a href={process.env.BOOKING_PROVIDER_URL || '#'} target="_blank" rel="noopener noreferrer" className="bg-ink text-white dark:bg-white dark:text-ink font-poppins font-semibold py-3 px-8 rounded-lg hover:bg-slate-800 dark:hover:bg-gray-200 transition-all duration-300 transform hover:scale-105">
                         Book Now
                     </a>
-                    <a href="#services" className="border-2 border-ink text-ink dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-ink font-poppins font-semibold py-3 px-8 rounded-lg hover:bg-ink hover:text-white transition-colors duration-300">
+                    <a href="#services" className="border-2 border-gray-300 text-slate dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-ink font-poppins font-semibold py-3 px-8 rounded-lg hover:bg-ink hover:text-white transition-colors duration-300">
                         View Prices
                     </a>
                 </div>
             </div>
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-                <div className="w-6 h-10 border-2 border-slate dark:border-white rounded-full flex justify-center items-start p-1">
-                    <div className="w-1 h-2 bg-slate dark:bg-white rounded-full animate-bounce"></div>
-                </div>
-            </div>
+            {/* Scroll indicator removed as per user request */}
         </section>
     );
 };
