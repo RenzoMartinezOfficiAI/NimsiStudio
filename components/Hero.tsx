@@ -4,7 +4,7 @@ const Hero: React.FC = () => {
     return (
         <section id="home" className="relative h-screen flex items-center justify-center text-center">
             {/* The background is now set on the body element */}
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent dark:from-ink dark:via-ink/50 dark:to-transparent"></div>
+            
             <div className="relative z-10 container mx-auto px-6">
                 <h1 className="mb-6">
                     <img
@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
                         className="mx-auto h-24 md:h-32 lg:h-40 w-auto dark:invert"
                     />
                 </h1>
-                <p className="max-w-2xl mx-auto text-lg text-slate dark:text-slate-200 mb-8">
+                <p className="max-w-2xl mx-auto text-lg text-slate dark:text-white mb-8">
                     Welcome to Nimsi's Studio, where we craft bespoke lash sets designed to elevate your confidence and simplify your beauty routine.
                 </p>
                 <div className="flex justify-center items-center gap-4">
@@ -26,8 +26,8 @@ const Hero: React.FC = () => {
                 </div>
             </div>
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-                <div className="w-6 h-10 border-2 border-slate dark:border-slate-400 rounded-full flex justify-center items-start p-1">
-                    <div className="w-1 h-2 bg-slate dark:bg-slate-400 rounded-full animate-bounce"></div>
+                <div className="w-6 h-10 border-2 border-slate dark:border-white rounded-full flex justify-center items-start p-1">
+                    <div className="w-1 h-2 bg-slate dark:bg-white rounded-full animate-bounce"></div>
                 </div>
             </div>
         </section>
