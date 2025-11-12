@@ -12,7 +12,7 @@ const About: React.FC = () => {
     ];
 
     return (
-        <section id="about" className="py-24 bg-white dark:bg-ink">
+        <section id="about" className="py-24 bg-gray-50 dark:bg-ink">
             <div ref={ref} className={`container mx-auto px-6 transition-all duration-1000 ${animationClasses}`}>
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-playfair font-bold text-ink dark:text-white">Meet Your Lash Artist</h2>
